@@ -5,6 +5,18 @@ import AccentText from "./AccentText";
 export default function Hero() {
   const lines = profile.tagline.split("\n");
 
+  const handleResumeClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    window.open(profile.resumeUrl, "_blank", "noopener,noreferrer");
+
+    const link = document.createElement("a");
+    link.href = profile.resumeUrl;
+    link.download = "Aryan_Reshamwala_SDE.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <header className="hero-grid">
       <div>
@@ -28,10 +40,16 @@ export default function Hero() {
 
         <div className="cta-row">
           <a href="#work" className="primary">
-            See my work <span className="arr">→</span>
+            See my work <span className="arr">{"->"}</span>
           </a>
-          <a href={profile.resumeUrl} target="_blank" className="ghost">
-            Resume.pdf ↓
+          <a
+            href={profile.resumeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ghost"
+            onClick={handleResumeClick}
+          >
+            Resume.pdf download
           </a>
         </div>
       </div>

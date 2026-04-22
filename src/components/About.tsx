@@ -8,7 +8,7 @@ export default function About() {
       <SectionHead
         num="02 / About"
         title="The short version, "
-        accent="honest."
+        accent="100% human writing"
         aside="A few paragraphs in place of a bio-blurb. Feels more true."
       />
 

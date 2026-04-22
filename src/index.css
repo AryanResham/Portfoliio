@@ -217,10 +217,13 @@ body::after {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-family: "JetBrains Mono", monospace;
-  font-size: 0.85rem;
-  color: #fff;
-  background: linear-gradient(135deg, var(--accent), #111 120%);
+  background-image: url("/pfp.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--bg-3);
+  color: transparent;
+  overflow: hidden;
   cursor: pointer;
   transition: transform 0.25s ease, box-shadow 0.3s ease;
 }
@@ -264,26 +267,16 @@ body::after {
   width: 100%;
   aspect-ratio: 1/1;
   border-radius: 10px;
-  background: linear-gradient(135deg, var(--accent), #1a1a2e 130%);
+  background-image: url("/pfp.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--bg-3);
   display: block;
   margin-bottom: 10px;
   border: 1px solid var(--rule);
   overflow: hidden;
   position: relative;
-}
-
-.pfp-card .pfp-img::before {
-  content: "A";
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 5rem;
-  font-weight: 300;
-  color: #fff;
-  letter-spacing: -0.06em;
 }
 
 .pfp-card .pfp-name {

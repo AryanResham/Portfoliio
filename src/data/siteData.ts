@@ -35,12 +35,11 @@ export const marqueeItems = [
 ];
 
 export const typingPhrases = [
-  "a cool little app",
-  "an infinite coffee machine",
+  "a nice little app",
+  "an infinite coffee dispenser",
   "big muscles",
   "a cool portfolio???",
   "something at 2am, probably...",
-  ""
 ];
 
 export type NowItem = {
