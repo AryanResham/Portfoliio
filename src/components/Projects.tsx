@@ -108,16 +108,17 @@ function Tape({
           <rect width="7" height="14" fill="#1a1000" />
           <rect x="7" width="7" height="14" fill="#f5c800" />
         </pattern>
+        <mask id={`${id}-m`}>
+          <rect x="-9999" y="-9999" width="19998" height="19998" fill="white" />
+          <path d={d} stroke="black" strokeWidth={26} fill="none" strokeLinecap="butt" />
+        </mask>
       </defs>
 
-      {/* shadow */}
-      <path d={d} stroke="rgba(0,0,0,0.45)" strokeWidth={48} fill="none" strokeLinecap="butt" />
-      {/* diagonal stripe edges */}
-      <path d={d} stroke={`url(#${id}-p)`} strokeWidth={42} fill="none" strokeLinecap="butt" opacity={0.9} />
+      {/* diagonal stripe edges only — center masked out */}
+      {/* diagonal stripe edges only — center masked out */}
+      <path d={d} stroke={`url(#${id}-p)`} strokeWidth={42} fill="none" strokeLinecap="butt" opacity={0.75} mask={`url(#${id}-m)`} />
       {/* yellow center body */}
-      <path d={d} stroke="#f5c800" strokeWidth={26} fill="none" strokeLinecap="butt" opacity={0.88} />
-      {/* sheen */}
-      <path d={d} stroke="rgba(255,255,255,0.18)" strokeWidth={12} fill="none" strokeLinecap="butt" />
+      <path d={d} stroke="#f5c800" strokeWidth={26} fill="none" strokeLinecap="butt" opacity={0.75} />
       <path id={id} d={d} fill="none" />
       <text
         fill="rgba(0,0,0,0.8)"
