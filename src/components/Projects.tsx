@@ -122,10 +122,10 @@ function Tape({
       <path id={id} d={d} fill="none" />
       <text
         fill="rgba(0,0,0,0.8)"
-        fontSize="9"
+        fontSize="13"
         fontFamily="JetBrains Mono, monospace"
-        fontWeight="700"
-        letterSpacing="1.5"
+        fontWeight="900"
+        letterSpacing="2"
         dominantBaseline="central"
       >
         <textPath href={`#${id}`} startOffset="1%">
