@@ -93,7 +93,7 @@ function Tape({
       onPointerMove={onPointerMove}
       onPointerUp={onPointerUp}
       onPointerCancel={onPointerUp}
-      style={{ cursor: "grab" }}
+      style={{ cursor: "grab", pointerEvents: "all" }}
     >
       {/* fat invisible hit area */}
       <path d={d} stroke="transparent" strokeWidth={80} fill="none" />
@@ -127,6 +127,7 @@ function Tape({
         fontWeight="900"
         letterSpacing="2"
         dominantBaseline="central"
+        style={{ userSelect: "none", pointerEvents: "none" }}
       >
         <textPath href={`#${id}`} startOffset="1%">
           {TAPE_TEXT}
@@ -136,7 +137,7 @@ function Tape({
   );
 }
 
-export default function Projects() {
+export default function Projects({ onPlayGame }: { onPlayGame?: () => void }) {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [dims, setDims] = useState({ w: 900, h: 400 });
 
@@ -164,7 +165,7 @@ export default function Projects() {
           width="100%"
           height="100%"
           viewBox={`0 0 ${w} ${h}`}
-          style={{ position: "absolute", inset: 0, zIndex: 5 }}
+          style={{ position: "absolute", inset: 0, zIndex: 5, pointerEvents: "none" }}
         >
           <Tape from={{ x: 0, y: 0 }} to={{ x: w, y: h }} containerRef={containerRef} />
         </svg>
@@ -175,6 +176,11 @@ export default function Projects() {
           <p className="wip-sub">
             I am gonna fill this up one day... I promise...
           </p>
+          {onPlayGame && (
+            <button className="wip-play-btn" onClick={onPlayGame}>
+              click for fun
+            </button>
+          )}
         </div>
       </div>
     </section>

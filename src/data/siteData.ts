@@ -4,7 +4,7 @@ export const profile = {
   name: "Aryan Reshamwala",
   initials: "A",
   tagline: "Hi, I'm <accent>Aryan</accent>.\nWelcome to my very <accent>un</accent>serious website.",
-  lede: "Third-year computer engineering student. I like building cool stuff. I also love",
+  lede: "Third-year computer engineering student. I like building cool stuff. I also love like food and beer and coffee and cool expensive shit",
   status: "Available · 2027 grad",
   location: "Mumbai · IST +05:30",
   resumeUrl: "uploads/Aryan_Reshamwala_SDE.pdf",
