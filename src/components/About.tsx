@@ -8,8 +8,8 @@ export default function About() {
       <SectionHead
         num="02 / About"
         title="The short version, "
-        accent="100% human writing"
-        aside="A few paragraphs in place of a bio-blurb. Feels more true."
+        accent="100% human written"
+        aside="An elevator pitch about me."
       />
 
       <div className="about">

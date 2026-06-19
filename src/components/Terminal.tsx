@@ -1,3 +1,4 @@
+import { ChevronRight, BookText, Cookie, Braces } from "lucide-react";
 import { nowItems, typingPhrases } from "../data/siteData";
 import { useClock } from "../hooks/useClock";
 import { useCountdown } from "../hooks/useCountdown";
@@ -26,7 +27,9 @@ export default function Terminal() {
             key={i}
             className={`now-row ${item.featured ? "big" : ""}`}
           >
-            <span className="icn">{item.icon}</span>
+            <span className="icn">
+              {item.label === "Currently building" ? <Braces size={16} /> : item.type === "countdown" ? <ChevronRight size={16} /> : item.label === "Reading" ? <BookText size={16} /> : item.label === "Baking" ? <Cookie size={16} /> : item.icon}
+            </span>
             <div>
               <div className="lbl">{item.label}</div>
               {item.type === "typing" ? (
@@ -64,7 +67,7 @@ export default function Terminal() {
 
       <div className="label">
         <span className="blink" />
-        status.live · syncing from Mumbai
+        status.{"<missing>"} · syncing from Mumbai
       </div>
     </div>
   );

@@ -3,8 +3,8 @@
 export const profile = {
   name: "Aryan Reshamwala",
   initials: "A",
-  tagline: "Hi, I'm <accent>Aryan</accent>.\nI build <verb>software</verb>\nmostly at night.",
-  lede: "Third-year computer engineering student. I like reducing latency, automating tedious things out of existence, and shipping interfaces that feel inevitable.",
+  tagline: "Hi, I'm <accent>Aryan</accent>.\nWelcome to my very <accent>un</accent>serious website.",
+  lede: "Third-year computer engineering student. I like building cool stuff. I also love",
   status: "Available · 2027 grad",
   location: "Mumbai · IST +05:30",
   resumeUrl: "uploads/Aryan_Reshamwala_SDE.pdf",
@@ -26,12 +26,12 @@ export const navLinks: NavLink[] = [
 ];
 
 export const marqueeItems = [
-  "Probably watching an F1 qualifying replay right now",
+  "Probably watching a dumb movie",
   "CGPA 9.89 — and annoyed about the 0.11",
-  "Bakes when debugging gets heavy",
-  "Chasing sub-50ms auction bids",
+  "",
   "Reads more than he writes",
   "Mumbai → anywhere with good coffee",
+  "Vibes == Coded"
 ];
 
 export const typingPhrases = [
@@ -40,6 +40,8 @@ export const typingPhrases = [
   "big muscles",
   "a cool portfolio???",
   "something at 2am, probably...",
+  "multi-million dollar start-up?",
+  "new beer flavours"
 ];
 
 export type NowItem = {
@@ -53,29 +55,29 @@ export type NowItem = {
 
 export const nowItems: NowItem[] = [
   {
-    icon: "▶",
+    icon: "",
     label: "Currently building",
     value: "",
     featured: true,
     type: "typing",
   },
   {
-    icon: "●",
+    icon: "",
     label: "Next F1 race",
     value: "Miami GP · Hard-Left at turn 17",
     type: "countdown",
   },
   {
-    icon: "■",
+    icon: "",
     label: "Reading",
-    value: "Feminist Literature",
-    meta: "pg 214\nof 589",
+    value: " <big impressive book>",
+    meta: "pg 42\nof 100",
   },
   {
-    icon: "▲",
+    icon: "",
     label: "Baking",
-    value: "Sourdough, attempt #7",
-    meta: "rise\n4h 12m",
+    value: "BREAD!!",
+    meta: "rise\n4h 20m",
   },
 ];
 
@@ -142,15 +144,27 @@ export type Experience = {
 
 export const experiences: Experience[] = [
   {
+    period: "May 2026 — Present",
+    role: "Automation Intern",
+    company: "GlobalGyan · Mumbai",
+    tag: "Internship",
+    points: [
+      "Integrating a Learning Record Store (LRS) and user tracking system into GyanCompass to monitor user progress.",
+      "Designed and deployed n8n workflows to automate manual processes and speed up routine tasks.",
+      "Built an internal management dashboard to give a clear and automated view to track revenue and other company performance metrics.",
+      "Standardized team task management by configuring and customizing Zoho Projects."      
+    ],
+  },
+  {
     period: "Jun 2025 — Jul 2025",
     role: "Zoho Integration Intern",
     company: "MBM Newtech · Mumbai",
     tag: "Internship",
     points: [
-      "Automated internal HR workflows with Zoho People — cut manual work by ~80%",
-      "Worked across departments to turn vague processes into opinionated automations",
-      "Built 4 custom apps in Zoho Creator, replacing years of Excel-based processes",
-      "Wrote SOPs clear enough that a first-week hire could follow them without pinging anyone",
+      "Automated internal HR workflows with Zoho People — cut manual work by ~80%.",
+      "Worked across departments to turn vague processes into opinionated automations.",
+      "Built 4 custom apps in Zoho Creator, replacing years of Excel-based processes.",
+      "Wrote SOPs clear enough that a first-week hire could follow them without pinging anyone.",
     ],
   },
   {
@@ -159,9 +173,9 @@ export const experiences: Experience[] = [
     company: "The Minimalist · Mumbai",
     tag: "Internship",
     points: [
-      "Converted Figma mocks into responsive pages — HTML, CSS, JavaScript",
-      "Built marketing e-mailers for clients; iterated on feedback from senior designers",
-      "Sat between design and engineering, keeping implementation honest to the mocks",
+      "Converted Figma designs into responsive pages using HTML, CSS, JavaScript.",
+      "Developed e-mailers for client marketing campaigns; iterated on feedback from senior designers.",
+      "Worked with the design department to ensure consistency between UI designs and final implementations.",
     ],
   },
 ];
@@ -208,10 +222,10 @@ export const education = {
 };
 
 export const aboutParagraphs = [
-  `I'm a Computer Engineering student who loves building things that are fast, scalable, and built to last. I recently spent months deep in WebSockets, Redis, and advanced Postgres just to understand how to handle high-concurrency data in real time — and I genuinely enjoyed every minute of it.`,
-  `Right now my focus sits at the intersection of <accent>system design and Gen AI</accent>. I care about the unglamorous parts — caching layers, queue workers, the small functions that keep big systems quiet — and I care just as much about what it feels like on the other side of the screen. Soft edges. Sensible defaults. No surprises at the bottom.`,
-  `I'm looking for a fast-paced engineering culture that values clean code and strong architecture — a place where I can learn rigorous standards from people who know more than I do, and contribute to software that solves real problems from day one.`,
-  `When I'm not at my keyboard you'll find me analysing F1 aerodynamics, reading something a little too long, cooking or baking my way through a stubborn recipe, or halfway through a show I was supposed to finish last week.`,
+  `I'm a Computer Engineering student who loves to build things. I enjoy learning about the whys and hows of things and their inner workings. I also enjoy building things that have a real applicaiton, solve a pain point or are just objectively cool or fun.`,
+  `Right now I am getting into <accent>System Design and Gen AI</accent>. I am learning about what it is, how it works, and how I can create something meaningful with it. I am still exploring new domains and tools and things and tech, trying to find what really excites me.`,
+  `I'd like to work in a place where I can learn from experienced devs, while making actual meaningful contributions and growing as an engineer.`,
+  `When I'm not at my keyboard you'll find me playing games, watching movies, reading, cooking or baking my way through a recipe.`,
 ];
 
 export type AboutCard = {
@@ -226,13 +240,13 @@ export const aboutCards: AboutCard[] = [
   { label: "Based in", value: "Mumbai", big: true, extra: "IST +05:30" },
   {
     label: "Currently",
-    value: "Open to internships",
+    value: "Open to internships and full-time roles",
     sub: "SDE · full-stack · backend",
   },
   {
     label: "Outside code",
-    value: "F1, cars, cooking, baking, shows",
-    sub: "And reading more than I write",
+    value: "Movies, Games, TV Shows, Baking, Cooking, F1",
+    sub: "and other fun stuff",
   },
 ];
 

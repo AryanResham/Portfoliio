@@ -6,9 +6,9 @@ export default function Experience() {
     <section id="experience">
       <SectionHead
         num="03 / Experience"
-        title="Two internships. "
-        accent="Both taught me more than I expected."
-        aside="One in design-to-code. One in enterprise automation. Both made me a better engineer."
+        title="Three internships. "
+        accent="Learnt a lot more than I expected."
+        aside="One in design-to-code. One in enterprise automation. One in enterprise learning and development. All made me a better engineer."
       />
 
       <div className="exp">

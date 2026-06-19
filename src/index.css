@@ -749,11 +749,13 @@ section + section {
   background: repeating-linear-gradient(
     -45deg,
     var(--bg-2),
-    var(--bg-2) 18px,
-    color-mix(in oklab, var(--accent), transparent 88%) 18px,
-    color-mix(in oklab, var(--accent), transparent 88%) 36px
+    var(--bg-2) 22px,
+    rgba(140, 55, 0, 0.12) 22px,
+    rgba(140, 55, 0, 0.12) 44px
   );
 }
+
+
 
 .wip-plate {
   background: var(--bg-2);
@@ -768,6 +770,7 @@ section + section {
   position: relative;
   z-index: 1;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  max-width: 440px;
 }
 
 .wip-badge {
