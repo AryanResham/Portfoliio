@@ -737,146 +737,71 @@ section + section {
   }
 }
 
-/* ─── Projects ─── */
-.projects {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(18px, 2vw, 26px);
-}
-
-@media (max-width: 860px) {
-  .projects {
-    grid-template-columns: 1fr;
-  }
-}
-
-.proj {
-  position: relative;
-  border: 1px solid var(--rule);
-  border-radius: 16px;
-  background: var(--bg-2);
-  padding: clamp(24px, 2.5vw, 32px);
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
+/* ─── WIP ─── */
+.wip-zone {
+  border-radius: 20px;
   overflow: hidden;
-  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1),
-    border-color 0.3s;
-  min-height: 360px;
+  position: relative;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--bg-2),
+    var(--bg-2) 18px,
+    color-mix(in oklab, var(--accent), transparent 88%) 18px,
+    color-mix(in oklab, var(--accent), transparent 88%) 36px
+  );
 }
 
-.proj:hover {
-  border-color: var(--accent);
-  transform: translateY(-4px);
-}
-
-.proj[data-size="lg"] {
-  grid-column: span 2;
-  flex-direction: row;
-  align-items: stretch;
-}
-
-.proj[data-size="lg"] .p-viz {
-  flex: 1;
-  min-height: 280px;
-}
-
-.proj[data-size="lg"] .p-body {
-  flex: 1;
+.wip-plate {
+  background: var(--bg-2);
+  border: 1px solid var(--rule-2);
+  border-radius: 16px;
+  padding: clamp(36px, 5vw, 64px) clamp(32px, 6vw, 96px);
+  text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 16px;
-}
-
-@media (max-width: 860px) {
-  .proj[data-size="lg"] {
-    grid-column: span 1;
-    flex-direction: column;
-  }
-}
-
-.p-head {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
 }
 
-.p-num {
+.wip-badge {
   font-family: "JetBrains Mono", monospace;
   font-size: 0.7rem;
-  color: var(--ink-dim);
-  letter-spacing: 0.1em;
-}
-
-.p-status {
-  font-family: "JetBrains Mono", monospace;
-  font-size: 0.66rem;
+  letter-spacing: 0.15em;
   color: var(--accent);
-  border: 1px solid var(--accent);
+  text-transform: uppercase;
+  border: 1px solid color-mix(in oklab, var(--accent), transparent 50%);
+  padding: 4px 14px;
   border-radius: 999px;
-  padding: 3px 10px;
-  letter-spacing: 0.08em;
+  background: color-mix(in oklab, var(--accent), transparent 88%);
 }
 
-.p-title {
+.wip-glyph {
+  font-size: 3.2rem;
+  line-height: 1;
+}
+
+.wip-title {
   font-family: "Space Grotesk", sans-serif;
-  font-weight: 500;
-  font-size: clamp(1.4rem, 2vw, 1.9rem);
-  line-height: 1.05;
-  letter-spacing: -0.03em;
+  font-weight: 400;
+  font-size: clamp(1.7rem, 3vw, 2.6rem);
+  letter-spacing: -0.035em;
   margin: 0;
+  line-height: 1.05;
 }
 
-.p-title .accent {
-  color: var(--accent);
-}
-
-.p-sub {
+.wip-sub {
   color: var(--ink-2);
   font-size: 0.92rem;
-  margin-top: 4px;
-}
-
-.p-desc {
-  color: var(--ink-2);
-  font-size: 0.92rem;
-  line-height: 1.6;
-  flex: 1;
-}
-
-.p-stack {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-
-.p-stack span {
-  font-family: "JetBrains Mono", monospace;
-  font-size: 0.66rem;
-  padding: 4px 10px;
-  border-radius: 999px;
-  background: var(--bg-3);
-  color: var(--ink-2);
-}
-
-.p-viz {
-  border: 1px solid var(--rule);
-  border-radius: 10px;
-  background: var(--bg-3);
-  overflow: hidden;
-  min-height: 180px;
-  position: relative;
-}
-
-.p-viz svg {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-.viz-pad {
-  padding: 18px;
+  line-height: 1.65;
+  max-width: 30ch;
+  margin: 0;
 }
 
 /* ─── About ─── */
